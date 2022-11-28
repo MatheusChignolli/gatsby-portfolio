@@ -4,7 +4,7 @@ import { Header, Layout } from '../components'
 import { ContentStyled } from './styles'
 import { contacts, technologies } from '../commons/constants'
 
-const IndexPage: React.FC<PageProps> = ({ navigate }) => {
+const IndexPage: React.FC<PageProps> = () => {
   return (
     <Layout>
       <Header />
@@ -58,10 +58,10 @@ const IndexPage: React.FC<PageProps> = ({ navigate }) => {
           <ul>
             {contacts.map(({ url, info, title }, index) => (
               <li key={`contact-${index}`}>
-                {title}: <br />
+                <b>{title}:</b> <br />
                 {info}
                 <Link target="_blank" to={url}>
-                  Link
+                  <button>Acessar</button>
                 </Link>
               </li>
             ))}
