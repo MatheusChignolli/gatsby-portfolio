@@ -59,10 +59,16 @@ const IndexPage: React.FC<PageProps> = () => {
             {contacts.map(({ url, info, title }, index) => (
               <li key={`contact-${index}`}>
                 <b>{title}:</b> <br />
-                {info}
-                <Link target="_blank" to={url}>
-                  <button>Acessar</button>
-                </Link>
+                {info} <br />
+                {url.includes('http') || url.includes('mailto') ? (
+                  <a target="_blank" href={url}>
+                    Acessar
+                  </a>
+                ) : (
+                  <Link target="_blank" to={url}>
+                    <button>Acessar</button>
+                  </Link>
+                )}
               </li>
             ))}
           </ul>

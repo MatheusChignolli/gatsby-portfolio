@@ -83,6 +83,14 @@ export const ContentStyled = styled.div`
       b {
         color: ${({ theme }) => theme.pink};
       }
+
+      li a {
+        padding: 8px;
+        border-radius: 4px;
+        display: inline-block;
+        color: ${({ theme }) => theme.light};
+        background-color: ${({ theme }) => theme.pink};
+      }
     }
   }
 

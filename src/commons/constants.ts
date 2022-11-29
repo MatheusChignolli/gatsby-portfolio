@@ -1,5 +1,10 @@
 export const contacts = [
   {
+    title: 'Github',
+    info: 'MatheusChignolli',
+    url: 'https://github.com/MatheusChignolli',
+  },
+  {
     title: 'E-mail',
     info: 'matheuschignolli@gmail.com',
     url: 'mailto:matheuschignolli@gmail.com',
